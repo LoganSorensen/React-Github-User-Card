@@ -42,19 +42,19 @@ class App extends React.Component {
     this.setState({userText: e.target.value})
   }
 
-  // componentDidUpdate(prevState, prevProps) {
-  //   if (this.state.users !== prevState.users) {
-  //     axios 
-  //     .get(`https://api.github.com/users/${this.state.userText}`)
-  //     .then(response => {
-  //       console.log("Follower data", response)
-  //       this.setState({users: response.data, userText: ''})
-  //     })
-  //     .catch(error => {
-  //       console.log("The data was not returned", error)
-  //     })
-  //   }
-  // }
+  componentDidUpdate(prevState, prevProps) {
+    if (this.state.users !== prevState.users) {
+      axios 
+      .get(`https://api.github.com/users/${this.state.userText}`)
+      .then(response => {
+        console.log("New user data", response)
+        this.setState({users: response.data})
+      })
+      .catch(error => {
+        console.log("The data was not returned", error)
+      })
+    }
+  }
 
   render() {
     console.log(this.state.users)
