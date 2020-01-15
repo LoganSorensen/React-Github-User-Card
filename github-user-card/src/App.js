@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from './components/user-card';
+import Card from './components/user/user-card';
 import axios from 'axios';
 
 import './App.css';
-import FollowerList from './components/follower-list';
+import FollowerList from './components/follower/follower-list';
 
 class App extends React.Component {
 
@@ -37,14 +37,12 @@ class App extends React.Component {
       })
   }
 
-
-
   render() {
     console.log(this.state.users)
     return (
       <div className="App">
         <Card users={this.state.users} />
-        <button onClick={this.fetchFollowers}>Click</button>
+        <button onClick={this.fetchFollowers}>Display Followers</button>
         <FollowerList followers={this.state.followers} />
       </div>
     );

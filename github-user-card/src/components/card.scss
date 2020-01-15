@@ -1,0 +1,26 @@
+.user-card {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 35%;
+    // border: 1px solid gray;
+    border-radius: 10px;
+    padding: 2% 0;
+    margin-top : 2%;
+    background-color: white;
+
+    img {
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        h2, p {
+            width: 27%;
+        }
+    }
+}

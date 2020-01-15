@@ -3,7 +3,7 @@ import FollowerCard from './follower-card';
 
 const FollowerList = props => {
     return(
-        <div>
+        <div className='list'>
             {props.followers.map(follower => (
                 <FollowerCard follower={follower} />
             ))}
