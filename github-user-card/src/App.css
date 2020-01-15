@@ -38,19 +38,45 @@
 }
 
 body {
-  background-image : linear-gradient(to bottom right, #9db8ad, dodgerblue);
+	background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+	background-size: 400% 450%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 button {
   margin-top: 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 10px 10px 0;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  background-color: white;
+  background-color: palevioletred;
   outline: none;
+  padding: 0.14% 0.5% 0.17%;
+  border: 2px solid black;
+  color: white;
 }
 
 button:active {
   background-color: rgb(224, 221, 221);
+}
+
+input {
+  border-radius: 10px 0 0 10px;
+  padding: 0.33% 1% 0.3%;
+  width: 20%;
+  margin-top: 2%;
+  outline: none;
+  border: 0;
 }

@@ -4,7 +4,9 @@ import '../card.scss';
 const Card = props => {
     return (
         <div className='user-card'>
-            <img src={props.users.avatar_url} alt='github avatar'></img>
+            <div className='image-cont'>
+                <img src={props.users.avatar_url} alt='github avatar'></img>
+            </div>
             <div className='card-info'>
                 <h2>{props.users.login}</h2>
                 <a href={props.users.url}>{props.users.url}</a>
